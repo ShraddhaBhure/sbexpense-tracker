@@ -7,7 +7,7 @@ namespace sbExpenseTracker.Models
     {
         [Key]
         public int CategoryId { get; set; }
-        [Column(TypeName ="nvarchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Title { get; set; }
         [Column(TypeName = "nvarchar(50)")]
 
@@ -15,6 +15,14 @@ namespace sbExpenseTracker.Models
         [Column(TypeName = "nvarchar(50)")]
 
         public string Type { get; set; }
+        [NotMapped]
+        public string TitleWithIcon
+        {
+            get
+            {
+                return this.Icon + "" + this.Title;
 
+            }
+        }
     }
 }

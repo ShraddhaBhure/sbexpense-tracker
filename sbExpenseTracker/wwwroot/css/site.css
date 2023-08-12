@@ -11,8 +11,65 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  font-family:"Inter"
 }
 
+*:not(.fa-solid):not(.fa):not(.e-icons){
+    font-family:"Inter"
+}
 body {
   margin-bottom: 60px;
+  background-color: #12161d;
+  color:white
+
+}
+.e-bigger {
+    font-size: x-large;
+}
+
+.btn:focus, .btn:active{
+    outline:none !important;
+    box-shadow:none;
+}
+/*HyperLink*/
+.no-a-decoration, .no-a-decoration:hover{
+    text-decoration:none;
+    color:inherit;
+}
+.e-grid{
+    border:0;
+    border-radius:5px;
+}
+.e-grid .e.gridcontent, .e-grid .e-table {
+    background-color: #1a222b;
+}
+    .e-grid .e-gridheader{
+        border:5px;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        padding:10px;
+        background-color:#222b33;
+    }
+
+
+    .e-btn-group.custom-rbt-group {
+        width: 100%;
+    }
+.e-btn-group.custom-rbt-group .e-btn {
+    width: 50%;
+}
+.custom-rbt-group label.e-btn{
+    box-shadow:none!important;
+    border:1px solid #fff;
+    background-color:rgb(34 43 51);
+    color:#fff;
+}
+.custom-rbt-group.custom-rbt-group input:checked + label.e-btn {
+    background-color:#fff;
+    color:#212b36;
+    border:1px solid #fff;
+}
+.widget{
+    border-radius:1rem;
+    background-color: #1a222b;
 }
