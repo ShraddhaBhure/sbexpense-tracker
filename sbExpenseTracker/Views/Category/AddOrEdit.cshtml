@@ -9,8 +9,8 @@
 
 <div class="row">
     <div class="col-md-7">
-      <div class="widget p-5">
-            <form asp-action="AddOrEdit">
+        <div class="widget p-5" style="background-color:#212b36">
+            <form asp-action="AddOrEdit" id="form-element">
                 @if (Model != null)
                 {
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -22,23 +22,17 @@
                             <label class="e-btn" for="radioleft">Expense</label>
                             <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type=="Income")" />
                             <label class="e-btn" for="radiomiddle">Income</label>
-
                         </div>
-                        @*<span asp-validation-for="Type" class="text-danger"></span>*@
 
                     </div>
                     <div class="mb-3">
                         @*@Html.EJS().TextBox("title").Placeholder("First Name").FloatLabelType(Syncfusion.EJ2.Inputs.FloatLabelType.Auto).Render()*@
-                    
-                        <ejs-textbox id="title" placeholder="Title" ejs-for="Title" FloatLabelType="Always"></ejs-textbox>
-                        @* <span asp-validation-for="Title" class="text-danger"></span>*@
-                    
+
+                        <ejs-textbox id="title" name="Title" placeholder="Title" ejs-for="Title" FloatLabelType="Always"></ejs-textbox>
+                         <span asp-validation-for="Title" class="text-danger fs-6"></span>   @*this is server side validation*@
                     </div>
                     <div class="mb-3">
                         <ejs-textbox id="icon" placeholder="Icon" ejs-for="Icon" FloatLabelType="Always"></ejs-textbox>
-
-                        @* <span asp-validation-for="Icon" class="text-danger"></span>*@
-                    
                     </div>
                 }
                 <ejs-button id="submit" type="submit" content="submit" cssClass="e-success"></ejs-button>
@@ -53,6 +47,24 @@
 
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+
+@*<script>
+    // Sets for Client side validations using Scrynfusion libery
+    var options = {
+        rules: {
+            'Title': { required: true },
+        },
+    };
+
+    // Defines FormValidator to validate the TextBox
+    var formObject = new ej.inputs.FormValidator('#form-element', options);
+
+    // Places error label outside the TextBox using the customPlacement event of FormValidator
+    formObject.customPlacement = function (element, errorElement) {
+        element.parentElement.parentElement.appendChild(errorElement);
+    };
+    // Form validates the input values using validate method of FormValidator
+    document.getElementById("submit").addEventListener('click', function () {
+        formObject.validate();
+    });
+</script>*@
