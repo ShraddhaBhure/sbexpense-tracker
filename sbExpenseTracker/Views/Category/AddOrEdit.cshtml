@@ -2,7 +2,8 @@
 @model sbExpenseTracker.Models.Category
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["PageTitle"] = Model.CategoryId==0? "Create a new category " : "Edit Category";
+
 }
 
 
@@ -23,21 +24,21 @@
                             <label class="e-btn" for="radiomiddle">Income</label>
 
                         </div>
-                        @*                    <span asp-validation-for="Type" class="text-danger"></span>
-                    *@
+                        @*<span asp-validation-for="Type" class="text-danger"></span>*@
+
                     </div>
                     <div class="mb-3">
-                        @*                @Html.EJS().TextBox("title").Placeholder("First Name").FloatLabelType(Syncfusion.EJ2.Inputs.FloatLabelType.Auto).Render()
-                    *@
+                        @*@Html.EJS().TextBox("title").Placeholder("First Name").FloatLabelType(Syncfusion.EJ2.Inputs.FloatLabelType.Auto).Render()*@
+                    
                         <ejs-textbox id="title" placeholder="Title" ejs-for="Title" FloatLabelType="Always"></ejs-textbox>
-                        @*                    <span asp-validation-for="Title" class="text-danger"></span>
-                    *@
+                        @* <span asp-validation-for="Title" class="text-danger"></span>*@
+                    
                     </div>
                     <div class="mb-3">
                         <ejs-textbox id="icon" placeholder="Icon" ejs-for="Icon" FloatLabelType="Always"></ejs-textbox>
 
-                        @*                <span asp-validation-for="Icon" class="text-danger"></span>
-                    *@
+                        @* <span asp-validation-for="Icon" class="text-danger"></span>*@
+                    
                     </div>
                 }
                 <ejs-button id="submit" type="submit" content="submit" cssClass="e-success"></ejs-button>

@@ -27,6 +27,10 @@ body {
     font-size: x-large;
 }
 
+.e-breadcrumb a, .e-br a:hover {
+    text-decoration: none!important;
+    color: inherit !important;
+}
 .btn:focus, .btn:active{
     outline:none !important;
     box-shadow:none;
