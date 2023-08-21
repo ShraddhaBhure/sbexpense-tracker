@@ -1,4 +1,4 @@
-# sbexpense-tracker Dashboard Project
+# sbexpense-tracker Dashboard Project 💰
 
 Welcome to the Expense Tracker Dashboard project! This ASP.NET Core MVC application serves as an expense tracker, providing insightful visualizations through interactive charts and data representations.
 The project utilizes SQL Server, Entity Framework Core, Bootstrap and Syncfusion script files to enhance the user experience.
