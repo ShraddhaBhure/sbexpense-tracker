@@ -1,7 +1,7 @@
 # sbexpense-tracker Dashboard Project
 
 Welcome to the Expense Tracker Dashboard project! This ASP.NET Core MVC application serves as an expense tracker, providing insightful visualizations through interactive charts and data representations.
-The project utilizes SQL Server, Entity Framework Core, and Syncfusion script files to enhance the user experience.
+The project utilizes SQL Server, Entity Framework Core, and Bootstraps and Syncfusion script files to enhance the user experience.
 
 ## Features
 
@@ -16,4 +16,5 @@ The project utilizes SQL Server, Entity Framework Core, and Syncfusion script fi
 - SQL Server: A relational database management system used to store expense data.
 - Entity Framework Core: An object-relational mapper (ORM) used for database interaction.
 - Syncfusion Script Files: Utilized to create interactive user interface, spline charts and donut charts for data visualization.
+- Bootstrap: A popular front-end framework used to create responsive and visually appealing user interfaces.
 
