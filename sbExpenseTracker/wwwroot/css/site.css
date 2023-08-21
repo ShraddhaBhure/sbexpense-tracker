@@ -7,6 +7,7 @@ html {
     font-size: 16px;
   }
 }
+
 /*body*/
 html {
   position: relative;
@@ -18,7 +19,7 @@ html {
     font-family:"Inter"
 }
 body {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   background-color: #12161d;
   color:white
 
@@ -27,9 +28,17 @@ body {
     font-size: x-large;
 }
 
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -150px;
+    margin-left: -15px;
+}
 /*main-content*/
 .main-content {
-    margin:290px;
+    margin:250px;
 }
 /*breadcrumb*/
 .e-breadcrumb a, .e-br a:hover {
@@ -59,10 +68,10 @@ body {
         border:5px;
         border-top-left-radius:5px;
         border-top-right-radius:5px;
-        padding:10px;
+        padding:5px;
         background-color:#222b33;
     }
-    /*buttongroup*/
+    /*radiobuttongroup*/
 
     .e-btn-group.custom-rbt-group {
         width: 100%;
@@ -70,11 +79,34 @@ body {
 .e-btn-group.custom-rbt-group .e-btn {
     width: 50%;
 }
-.custom-rbt-group label.e-btn{
-    box-shadow:none!important;
-    border:1px solid #fff;
-    background-color:rgb(34 43 51);
-    color:#fff;
+/*navbar*/
+nav.navbar{
+    background-color:rgba(18 ,22, 29);
+}
+nav.nav i{
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+ nav.navbar i:hover,nav-navbar img:hover{
+     cursor: pointer;
+     background-color: #48545f14;
+     transform:scale(1.08) translateZ(0px);
+ }
+
+/*profile-pic*/
+img.profile-pic{
+    width: 46px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.custom-rbt-group label.e-btn {
+    box-shadow: none !important;
+    border: 1px solid #fff;
+    background-color: rgb(34 43 51);
+    color: #fff;
 }
 .custom-rbt-group.custom-rbt-group input:checked + label.e-btn {
     background-color:#fff;
@@ -86,7 +118,7 @@ body {
 #sidebar {
     background-color: #12161d;
     border-right: 1px dashed rgba(75,82,85,0,24);
-    padding: 10px 20px;
+    padding: 8px 15px;
 }
 .widget{
     border-radius:1rem;
