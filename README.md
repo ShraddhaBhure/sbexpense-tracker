@@ -6,8 +6,11 @@ The project utilizes SQL Server, Entity Framework Core, Bootstrap and Syncfusion
 ## Features
 
 💷- Track and manage your expenses  through an intuitive dashboard interface.
+
 💸- Visualize expense data using Syncfusion script files for spline charts and donut charts.
+
 💰- Store and retrieve expense data from a SQL Server database using Entity Framework Core.
+
 💳- Analyze your spending patterns and make informed financial decisions.
 
 ## Technologies Used
